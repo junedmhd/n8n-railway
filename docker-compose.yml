@@ -12,6 +12,7 @@ services:
       - DB_POSTGRESDB_DATABASE=n8n
       - DB_POSTGRESDB_USER=n8n
       - DB_POSTGRESDB_PASSWORD=n8n_password
+      - N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=pg
       - PORT=5555
       - N8N_LOG_LEVEL=info
@@ -29,8 +30,6 @@ services:
   postgres:
     image: postgres:16
     environment:
-      - MCP_BRAVE_API_KEY=BSAKa3_9QEednD7QNH4BZ6JOt1eAq7K
-      - N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
       - POSTGRES_DB=n8n
       - POSTGRES_USER=n8n
       - POSTGRES_PASSWORD=n8n_password
